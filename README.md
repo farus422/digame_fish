@@ -44,7 +44,7 @@
       "XBegin": -50,
       "XEnd": -100,
       "YBegin": 0,
-      "YEnd": 600,
+      "YEnd": 600
     }
   ]
 }
@@ -97,7 +97,7 @@
     "XBegin": -50,
     "XEnd": -100,
     "YBegin": 0,
-    "YEnd": 600,
+    "YEnd": 600
   },
   "Objects": [
     前面這三個隊列就給他套用預設吧
