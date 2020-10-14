@@ -1,14 +1,20 @@
+# 捕魚機腳本使用手冊
+
 ### 目錄<span id="目錄"></span>
+
 <a href="#基本規則">基本規則</a><br />
+<a href="#叫用腳本時的一些規則">叫用腳本時的一些規則</a><br />
 <a href="#一個簡單的示例">一個簡單的示例</a><br />
 <a href="#簡單的CallScript示例">簡單的CallScript示例</a><br />
 <a href="#json全欄位示例">json全欄位示例</a><br />
 
-### 基本規則<span id="基本規則"></span>
+---------------------------------------------------------
+
+### 基本規則<span id="基本規則"></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#目錄">(回到目錄)</a>
 - 腳本使用的時間單位固定為：毫秒(ms)
 - 除了必備欄位外，其餘欄位皆為可省略
 
-### 關於叫用腳本時的一些規則 ###
+### 叫用腳本時的一些規則<span id="叫用腳本時的一些規則"></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#目錄">(回到目錄)</a>
 - 隊伍NPC的編號
   - A1. 取Objects[].CallScript.NPCSettings[].NPCNumber
   - A2. 取TeamSettingToCall.NPCSettings[].NPCNumber
@@ -19,7 +25,7 @@
   - 物件有指定則使用物件設定
   - 若無則取叫用者傳入的 NPCActiveStep * NpcIndex
 
-### 一個簡單的示例<span id="一個簡單的示例"></span>
+### 一個簡單的示例<span id="一個簡單的示例"></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#目錄">(回到目錄)</a>
 ```json
 功能：每秒產生一隻魚，X介於-50 ~ -100，Y介於0 ~ 600，生魚時間會亂數增加 0 ~ 500ms
 
@@ -45,16 +51,16 @@
       "XBegin": -50,
       "XEnd": -100,
       "YBegin": 0,
-      "YEnd": 600
+      "YEnd": 600,
     }
   ]
 }
 ```
 
-### 簡單的CallScript示例<span id="簡單的CallScript示例"></span>
+### 簡單的CallScript示例<span id="簡單的CallScript示例"></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#目錄">(回到目錄)</a>
 ```json
 
-檔名:Team_M1_5Npc.json
+檔名：Team_M1_5Npc.json
 功能：這個腳本會根據呼叫者給的參數使用Motion1建立5隻NPC
 {
   "Objects": [
@@ -76,6 +82,7 @@
   ]
 }
 
+檔名：FourTeam_M1.json
 功能：每隔五秒執行一次，每次產生4個隊伍，每個隊伍有5隻魚
 {
   "Probability": 100,
@@ -98,7 +105,7 @@
     "XBegin": -50,
     "XEnd": -100,
     "YBegin": 0,
-    "YEnd": 600
+    "YEnd": 600,
   },
   "Objects": [
     前面這三個隊列就給他套用預設吧
@@ -150,7 +157,7 @@
 }
 ```
 
-### json全欄位示例<span id="json全欄位示例"></span>
+### json全欄位示例<span id="json全欄位示例"></span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#目錄">(回到目錄)</a>
 ```json
 {
   "Probability": 250, 必備。腳本被抽中的機率，以權重的方式計算，若設為0則此腳本必定不會被抽中只能被其他腳本呼叫
