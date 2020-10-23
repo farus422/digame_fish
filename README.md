@@ -145,13 +145,13 @@
           }
         ],
         "NPCActiveStepsDefault": [1000],  設定本隊列內每隻魚的產生間距為相隔1秒
-        "XBegin": -50,
-        "XEnd": -70,
-        "YBegin": 0,
-        "YEnd": 600,
       },
       "ActiveTimeBegin": 3000,
       "ActiveTimeEnd": 4000
+      "XBegin": -50,
+      "XEnd": -70,
+      "YBegin": 0,
+      "YEnd": 600,
     }
   ]
 }
@@ -271,6 +271,7 @@
         2,
         3
       ],
+      不管是不是叫用腳本，時間、座標、角度，這三個固定都是放在這個階層
       "ActiveTimeBegin": 0, 物件生成的時間區段(區段開始)
       "ActiveTimeEnd": 1000, 物件生成的時間區段(區段結束)
       "XBegin": -50,
