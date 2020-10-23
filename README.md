@@ -147,7 +147,7 @@
         "NPCActiveStepsDefault": [1000],  設定本隊列內每隻魚的產生間距為相隔1秒
       },
       "ActiveTimeBegin": 3000,
-      "ActiveTimeEnd": 4000
+      "ActiveTimeEnd": 4000,
       "XBegin": -50,
       "XEnd": -70,
       "YBegin": 0,
