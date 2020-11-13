@@ -51,7 +51,7 @@
       "XBegin": -50,
       "XEnd": -100,
       "YBegin": 0,
-      "YEnd": 600,
+      "YEnd": 600
     }
   ]
 }
@@ -90,13 +90,13 @@
   "TeamSettingToCall": { 這邊先利用TeamSettingToCall給定預設的呼叫參數
     "NPCSettings": [
       {
-        "NPCNumber": 11,
+        "NPCNumber": 11
       },
       {
-        "NPCNumber": 12,
+        "NPCNumber": 12
       },
       {
-        "NPCNumber": 13,
+        "NPCNumber": 13
       }
     ],
     "NPCActiveStepsDefault": [
@@ -105,7 +105,7 @@
     "XBegin": -50,
     "XEnd": -100,
     "YBegin": 0,
-    "YEnd": 600,
+    "YEnd": 600
   },
   "Objects": [
     前面這三個隊列就給他套用預設吧
@@ -144,14 +144,14 @@
             "NPCNumber": 13
           }
         ],
-        "NPCActiveStepsDefault": [1000],  設定本隊列內每隻魚的產生間距為相隔1秒
+        "NPCActiveStepsDefault": [1000]  設定本隊列內每隻魚的產生間距為相隔1秒
       },
       "ActiveTimeBegin": 3000,
       "ActiveTimeEnd": 4000,
       "XBegin": -50,
       "XEnd": -70,
       "YBegin": 0,
-      "YEnd": 600,
+      "YEnd": 600
     }
   ]
 }
