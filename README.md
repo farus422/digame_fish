@@ -36,13 +36,13 @@
     {
       "NPCSettings": [
         {
-          "NPCNumber": 1,
+          "NPCNumber": 1
         },
         {
-          "NPCNumber": 2,
+          "NPCNumber": 2
         },
         {
-          "NPCNumber": 3,
+          "NPCNumber": 3
         }
       ],
       "NPCMotionsDefault": [1, 2, 3],
