@@ -101,7 +101,7 @@
         "NPCNumber": 13
       }
     ],
-    "NPCActiveStepsDefault": [
+    "NPCActiveStepsDefault": [ 這邊指定了被呼叫的腳本生魚的間隔時間為0.5秒
       500
     ],
     "XBegin": -50,
@@ -117,21 +117,21 @@
       "CallScript": {
         "Scripts": ["Team_M1_5Npc.json"]
       },
-      "ActiveTimeBegin": 0,
+      "ActiveTimeBegin": 0, 在第0秒時產生第一個隊伍
       "ActiveTimeEnd": 0
     },
     {
       "CallScript": {
         "Scripts": ["Team_M1_5Npc.json"]
       },
-      "ActiveTimeBegin": 1000,
+      "ActiveTimeBegin": 1000, 在第1秒時產生一個隊伍
       "ActiveTimeEnd": 1000
     },
     {
       "CallScript": {
         "Scripts": ["Team_M1_5Npc.json"]
       },
-      "ActiveTimeBegin": 2000,
+      "ActiveTimeBegin": 2000, 在第2秒時產生一個隊伍
       "ActiveTimeEnd": 2000
     },
     { 我們可以為每個隊伍指定預設值以外的參數
