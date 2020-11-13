@@ -51,7 +51,9 @@
       "XBegin": -50,
       "XEnd": -100,
       "YBegin": 0,
-      "YEnd": 600
+      "YEnd": 600,
+      "AngleBegin": -45,
+      "AngleEnd": 45
     }
   ]
 }
@@ -105,7 +107,9 @@
     "XBegin": -50,
     "XEnd": -100,
     "YBegin": 0,
-    "YEnd": 600
+    "YEnd": 600,
+    "AngleBegin": -45,
+    "AngleEnd": 45
   },
   "Objects": [
     前面這三個隊列就給他套用預設吧
@@ -151,7 +155,9 @@
       "XBegin": -50,
       "XEnd": -70,
       "YBegin": 0,
-      "YEnd": 600
+      "YEnd": 600,
+      "AngleBegin": -45,
+      "AngleEnd": 45
     }
   ]
 }
