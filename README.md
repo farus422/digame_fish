@@ -90,28 +90,28 @@
 {
   "Probability": 100,
   "NextScript": 5000,
-  "TeamSettingToCall": { 這邊先利用TeamSettingToCall給定預設的呼叫參數
-    "NPCSettings": [
-      {
-        "NPCNumber": 11
-      },
-      {
-        "NPCNumber": 12
-      },
-      {
-        "NPCNumber": 13
-      }
-    ],
-    "NPCActiveStepsDefault": [ 這邊指定了被呼叫的腳本生魚的間隔時間為0.5秒
-      500
-    ],
-    "XBegin": -50,
-    "XEnd": -100,
-    "YBegin": 0,
-    "YEnd": 600,
-    "AngleBegin": -45,
-    "AngleEnd": 45
-  },
+  "TeamSettingToCall": [ 這邊先利用TeamSettingToCall給定預設的呼叫參數
+    { 這是結構陣列，伺服器每次會從陣列中隨機取一個
+      "NPCSettings": [{"NPCNumber": 11},{"NPCNumber": 12},{"NPCNumber": 13}],
+      "NPCActiveStepsDefault": [500], 這邊指定了被呼叫的腳本生魚的間隔時間預設為0.5秒
+      "XBegin": -50,
+      "XEnd": -50,
+      "YBegin": 0,
+      "YEnd": 600,
+      "AngleBegin": -45,
+      "AngleEnd": 45
+    },
+    {
+      "NPCSettings": [{"NPCNumber": 11},{"NPCNumber": 12},{"NPCNumber": 13}],
+      "NPCActiveStepsDefault": [500],
+      "XBegin": 100,
+      "XEnd": 600,
+      "YBegin": -50,
+      "YEnd": -50,
+      "AngleBegin": 45,
+      "AngleEnd": 135
+    }
+  ],
   "Objects": [
     前面這三個隊列就給他套用預設吧
     {
@@ -170,67 +170,65 @@
   "Probability": 250, 必備。腳本被抽中的機率，以權重的方式計算，若設為0則此腳本必定不會被抽中只能被其他腳本呼叫
   "NextScript": 1000, 必備。這個腳本跑完後要等多久才可以抽下個腳本
   
-  "TeamSetting": { 設置本腳本的預設值，當Objects裡面有參數省略時即以此處設定為預設，可使 Objects 內的物件省去許多人工計算的麻煩
-    "NPCSettings": [ 從這陣列內隨機取一個
-      {
-        "NPCNumber": 11, NPC的編號
-        "NPCActiveSteps": 500 下個NPC生成的間隔
-      },
-      {
-        "NPCNumber": 11,
-        "NPCActiveSteps": 500
-      },
-      {
-        "NPCNumber": 13,
-        "NPCActiveSteps": 0
-      }
-    ],
-    "NPCActiveStepsDefault": [ 預設隊伍NPC產生的時距，當NPCSettings[]裡面的NPCActiveSteps為0則會取用此處
-      500,
-      300,
-      200
-    ],
-    "Speed": 0.5, 隊伍速度，取代魚的速度讓整個隊伍速度一致
-    "SpeedDouble": 1.5, 隊伍加速，整個隊伍加速
-    "XBegin": -50,
-    "XEnd": -60,
-    "YBegin": 50,
-    "YEnd": 550,
-    "ZBegin": 0,
-    "ZEnd": 0,
-    "AngleBegin": -10,
-    "AngleEnd": 10
-  },
+  "TeamSetting": [ 設置本腳本的預設值，當Objects裡面有參數省略時即以此處設定為預設，可使 Objects 內的物件省去許多人工計算的麻煩
+    {
+      "NPCSettings": [ 結構陣列，隨機取一個
+        {
+          "NPCNumber": 11, NPC的編號
+          "NPCActiveSteps": 500 在沒有指定ActiveTime的物件，會用這個值X物件的Index來當作ActiveTime
+        },
+        {
+          "NPCNumber": 11,
+          "NPCActiveSteps": 500
+        },
+        {
+          "NPCNumber": 13,
+          "NPCActiveSteps": 0
+        }
+      ],
+      "NPCActiveStepsDefault": [500,300,200], 預設隊伍NPC產生的時距，當NPCSettings[]裡面的NPCActiveSteps為0則會取用此處
+      "Speed": 0.5, 隊伍速度，取代魚原本的速度讓整個隊伍速度一致
+      "SpeedDouble": 1.5, 隊伍加速，整個隊伍加速
+      "XBegin": -50,
+      "XEnd": -60,
+      "YBegin": 50,
+      "YEnd": 550,
+      "ZBegin": 0,
+      "ZEnd": 0,
+      "AngleBegin": -10,
+      "AngleEnd": 10
+    }
+  ],
 
-  "TeamSettingToCall": { 呼叫其他腳本時才會生效，用來覆蓋被呼叫腳本內的TeamSetting資料，這個結構內有設定的才會覆蓋，沒設定到的就是沿用被呼叫者內的設定
-    "NPCSettings": [
-      {
-        "NPCNumber": 11,
-        "NPCActiveSteps": 500
-      },
-      {
-        "NPCNumber": 11,
-        "NPCActiveSteps": 500
-      },
-      {
-        "NPCNumber": 13,
-        "NPCActiveSteps": 0
-      }
-    ],
-    "NPCActiveStepsDefault": [
-      500
-    ],
-    "Speed": 0.5,
-    "SpeedDouble": 1.5,
-    "XBegin": -50,
-    "XEnd": -60,
-    "YBegin": 50,
-    "YEnd": 550,
-    "ZBegin": 0,
-    "ZEnd": 0,
-    "AngleBegin": -10,
-    "AngleEnd": 10
-  },
+  "TeamSettingToCall": [ 呼叫其他腳本時才會生效，用來覆蓋被呼叫腳本內的TeamSetting資料，這個結構內有設定的才會覆蓋，沒設定到的就是沿用被呼叫者內的設定
+    {
+      "NPCSettings": [
+        {
+          "NPCNumber": 11,
+          "NPCActiveSteps": 500
+        },
+        {
+          "NPCNumber": 11,
+          "NPCActiveSteps": 500
+        },
+        {
+          "NPCNumber": 13,
+          "NPCActiveSteps": 0
+        }
+      ],
+      "NPCActiveStepsDefault": [500],
+      "Speed": 0.5,
+      "SpeedDouble": 1.5,
+      "XBegin": -50,
+      "XEnd": -60,
+      "YBegin": 50,
+      "YEnd": 550,
+      "ZBegin": 0,
+      "ZEnd": 0,
+      "AngleBegin": -10,
+      "AngleEnd": 10
+    }
+  ],
 
   "Objects": [ 必備。物件列表
     {
@@ -305,11 +303,7 @@
           "NPCMotion": 0
         }
       ],
-      "NPCMotionsDefault": [
-        1,
-        2,
-        3
-      ],
+      "NPCMotionsDefault": [1, 2, 3],
       "ActiveTimeBegin": 2000,
       "ActiveTimeEnd": 3000,
       "XBegin": -50,
