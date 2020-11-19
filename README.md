@@ -257,25 +257,6 @@
           300
         ]
       },
-      "NPCSettings": [ 指定物件的編號跟軌跡，當CallScript存在時此處無意義可省略，反之則為必備欄位
-        {
-          "NPCNumber": 2, 生成物件的編號
-          "NPCMotion": 1 生成物件的軌跡
-        },
-        {
-          "NPCNumber": 3,
-          "NPCMotion": 0
-        },
-        {
-          "NPCNumber": 4,
-          "NPCMotion": 0
-        }
-      ],
-      "NPCMotionsDefault": [ 預設的NPCMotion，當NPCSettings[]裡面的NPCMotion為0則會取用此處
-        1,
-        2,
-        3
-      ],
       不管是不是叫用腳本，時間、座標、角度，這三個固定都是放在這個階層
       "ActiveTimeBegin": 0, 物件生成的時間區段(區段開始)
       "ActiveTimeEnd": 1000, 物件生成的時間區段(區段結束)
@@ -289,10 +270,10 @@
       "AngleEnd": 60
     },
     {
-      "NPCSettings": [
+      "NPCSettings": [ 指定物件的編號跟軌跡，當CallScript存在時此處無意義可省略，反之則為必備欄位
         {
-          "NPCNumber": 11,
-          "NPCMotion": 1
+          "NPCNumber": 11, 生成物件的編號
+          "NPCMotion": 1 生成物件的軌跡
         },
         {
           "NPCNumber": 11,
@@ -303,7 +284,7 @@
           "NPCMotion": 0
         }
       ],
-      "NPCMotionsDefault": [1, 2, 3],
+      "NPCMotionsDefault": [1, 2, 3], 預設的NPCMotion，當NPCSettings[]裡面的NPCMotion為0則會取用此處
       "ActiveTimeBegin": 2000,
       "ActiveTimeEnd": 3000,
       "XBegin": -50,
