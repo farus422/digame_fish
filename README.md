@@ -252,10 +252,7 @@
             "NPCActiveSteps": 0
           }
         ],
-        "NPCActiveStepsDefault": [ 預設的NPCActiveSteps，當NPCSettings[]裡面的NPCActiveSteps為0則會取用此處
-          500,
-          300
-        ]
+        "NPCActiveStepsDefault": [500,300] 預設的NPCActiveSteps，當NPCSettings[]裡面的NPCActiveSteps為0則會取用此處
       },
       不管是不是叫用腳本，時間、座標、角度，這三個固定都是放在這個階層
       "ActiveTimeBegin": 0, 物件生成的時間區段(區段開始)
