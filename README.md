@@ -202,6 +202,11 @@
 
   "TeamSettingToCall": [ 呼叫其他腳本時才會生效，用來覆蓋被呼叫腳本內的TeamSetting資料，這個結構內有設定的才會覆蓋，沒設定到的就是沿用被呼叫者內的設定
     {
+      "Scripts": [ 隨機取一個，當被叫用的腳本內的Scripts為空時可以使用此處的值
+        "MotionS.json",
+        "Circle.json",
+        "Square.json"
+      ],
       "NPCSettings": [
         {
           "NPCNumber": 11,
@@ -234,6 +239,11 @@
     {
       "CallScript": { 指示這個物件單位是呼叫腳本來產生
         "Scripts": [ 叫用腳本，隨機取一個
+          "MotionS.json",
+          "Circle.json",
+          "Square.json"
+        ],
+        "ScriptsToCall": [ 隨機取一個，當被叫用的腳本內的Scripts為空時可以使用此處的值
           "MotionS.json",
           "Circle.json",
           "Square.json"
