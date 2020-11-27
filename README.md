@@ -265,8 +265,8 @@
         "NPCActiveStepsDefault": [500,300] 預設的NPCActiveSteps，當NPCSettings[]裡面的NPCActiveSteps為0則會取用此處
       },
       不管是不是叫用腳本，時間、座標、角度，這三個固定都是放在這個階層
-      "ActiveTimeBegin": 0, 物件生成的時間區段(區段開始)
-      "ActiveTimeEnd": 1000, 物件生成的時間區段(區段結束)
+      "ActiveTimeBegin": 0, 物件生成的時間區段(區段開始)，注意：如果沒有設定此欄位，則會變成由ObjectIndex * SetpTime 來計算
+      "ActiveTimeEnd": 1000, 物件生成的時間區段(區段結束))，注意：如果沒有設定此欄位，則會變成由ObjectIndex * SetpTime 來計算
       "XBegin": -50,
       "XEnd": -100,
       "YBegin": 0,
@@ -292,8 +292,8 @@
         }
       ],
       "NPCMotionsDefault": [1, 2, 3], 預設的NPCMotion，當NPCSettings[]裡面的NPCMotion為0則會取用此處
-      "ActiveTimeBegin": 2000,
-      "ActiveTimeEnd": 3000,
+      "ActiveTimeBegin": 2000, 注意：如果沒有設定此欄位，則會變成由ObjectIndex * SetpTime 來計算
+      "ActiveTimeEnd": 3000, 注意：如果沒有設定此欄位，則會變成由ObjectIndex * SetpTime 來計算
       "XBegin": -50,
       "XEnd": -100,
       "YBegin": 300,
